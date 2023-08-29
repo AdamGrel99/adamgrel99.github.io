@@ -1,0 +1,125 @@
+/* Header Start */
+
+header{
+  height: 100vh;
+  width: 270px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: var(--sideBGColor);
+  overflow-y: auto;
+  position: fixed;
+  transition: 0.4s;
+  z-index: 99;
+}
+
+header .scrollbar{
+  height: 100%;
+}
+
+header .profile{
+  text-align: center;
+  margin: 25px;
+}
+
+header .profile img{
+  width: 180px;
+  border-radius: 50%;
+  border: 8px solid var(--iconBGColor);
+}
+
+header .profile h1{
+  color: var(--whiteTextColor);
+  margin: 5px 0;
+  font-weight: 700;
+}
+
+header .profile .social-icons a{
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 37px;
+  background-color: var(--iconBGColor);
+  color: var(--whiteTextColor);
+  font-size: 18px;
+  margin: 2px;
+  transition: 0.4s;
+}
+
+header .profile .social-icons a:hover{
+  background-color: var(--themeColor);
+}
+
+/* Navbar */
+
+header nav{
+  margin: 15px 30px;
+}
+
+header nav ul li{
+  list-style: none;
+}
+
+header nav ul li a{
+  display: inline-block;
+  text-decoration: none;
+  padding: 7px 10px;
+  margin: 7px 0;
+  color: var(--sideTextColor);
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.6px;
+}
+
+header nav ul li a i{
+  margin-right: 10px;
+  font-size: 20px;
+  transition: 0.4s;
+}
+
+header nav ul li a:hover i{
+  color: var(--themeColor);
+}
+
+header nav ul li .active i{
+  color: var(--themeColor);
+}
+
+/* Moblie Nav Toggle */
+
+#MenuBtn{
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  color: var(--whiteTextColor);
+  background-color: var(--themeColor);
+  text-align: center;
+  line-height: 42px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 20%);
+  display: none;
+  z-index: 999;
+}
+
+/* Mobile view */
+@media only screen and (max-width: 1050px){
+  header{
+    left: -300px;
+  }
+  #MenuBtn{
+    display: block;
+  }
+}
+
+/* Header toggle */
+
+.mobile-nav-active header{
+  left: 0;
+}
+
+/* Header End */
